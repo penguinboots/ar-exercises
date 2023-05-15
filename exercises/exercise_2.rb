@@ -7,6 +7,6 @@ puts "----------"
 # Your code goes here ...
 
 @store1 = Store.find_by(id: 1)
-@store1.destroy
+@store2 = Store.find_by(id: 2)
 
-puts Store.count
+@store1.update(annual_revenue: 340000)
