@@ -8,3 +8,12 @@ puts "Exercise 5"
 puts "----------"
 
 # Your code goes here ...
+
+revenue = Store.sum(:annual_revenue)
+puts "Total revenue: #{revenue}"
+
+average = revenue / Store.count
+puts "Average annual revenue: #{average}"
+
+millions = Store.where("annual_revenue > ?", 1000000).count
+puts "Stores generating over $1 million: #{millions}"
